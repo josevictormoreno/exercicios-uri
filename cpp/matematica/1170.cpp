@@ -1,24 +1,26 @@
 #include <iostream>
-
 using namespace std;
 
 int main()
 {
-    int n, dias;
-    float c;
-    cin >> n;
-    for(int i = 0; i < n; i++){
-        dias = 0;
+ int n, counter;
+ float food;
 
-        cin>> c;
+ cin >> n;
 
-        do{
-            c = int(c -  (c*0.5));
-            cout << c << endl;
-            dias++;
-        }while(c>0);
+ for (int i = 0; i < n; ++i)
+ {
+  cin >> food;
+  counter = 0;
 
-        cout << dias << " dias" << endl;
-    }
-    return 0;
+  while(food > 1)
+  {
+   counter++;
+   food = food/2;
+  }
+
+  cout << counter << " dias" << endl;
+ }
+
+ return 0;
 }
